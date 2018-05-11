@@ -27,6 +27,12 @@
 		</ul>
 	</nav>
 
+	<!-- Promotion Banner -->
+	<section>
+		<div class="banner-container">
+			<img class="banner" src="images/banners/oxyBottleBannerWide.png" alt="oxyBottle Banner"/>
+		</div>
+	</section>
 	
 	
 </body>
