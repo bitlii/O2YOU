@@ -1,0 +1,22 @@
+/* IMPORTING GOOGLE FONTS */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+
+* {
+	font-family: Roboto;
+	margin: 0;
+	padding: 0;
+}
+
+/* HEADER */
+header {
+	font-size: 1.5em;
+	background-color: #64b5f6;
+}
+
+header h1 {
+	padding-left: 0.5em;
+}
+
+#slogan {
+	font-size: 50%;
+}
