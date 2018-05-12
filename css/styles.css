@@ -62,7 +62,7 @@ nav ul li a {
 }
 
 /* ------ REGISTRATION & LOGIN ------ */
-.registration-container {
+.registration-container, .login-container {
 	background-color: #4268f4;
 	text-align: center;
 }
@@ -85,14 +85,14 @@ nav ul li a {
 	font-size: 14px;
 }
 
-#registration {
+#registration, #login {
 	background: #F9F9F9;
 	padding: 50px;
 	margin: 150px 0;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-#registration h1 {
+#registration h1, #login h1 {
 	font-weight: 300;
 	margin-bottom: 10px;
 }
