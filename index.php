@@ -30,10 +30,75 @@
 	<!-- Promotion Banner -->
 	<section>
 		<div class="banner-container">
-			<img class="banner" src="images/banners/oxyBottleBannerWide.png" alt="oxyBottle Banner"/>
+			<img class="banner" src="images/banners/oxyBottleBannerWide.png" alt="oxyBottle Banner">
 		</div>
 	</section>
 	
+	<!-- Product Section -->
+	<main class="product-section">
+		<!-- JARS -->
+		<div class="products">
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/jar/jarS.jpg" alt="Small Sized O2Jar" title="Small Sized O2Jar"></div>
+				<div class="product-info">
+					<h4>Small Sized O2Jar</h4>
+					<h5>$99.99</h5>
+				</div>
+			</div>
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/jar/jarM.jpg" alt="Medium Sized O2Jar" title="Medium Sized O2Jar"></div>
+				<div class="product-info">
+					<h4>Medium Sized O2Jar</h4>
+					<h5>$99.99</h5>
+				</div>
+			</div>
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/jar/jarL.jpg" alt="Large Sized O2Jar" title="Large Sized O2Jar"></div>
+				<div class="product-info">
+					<h4>Large Sized O2Jar</h4>
+					<h5>$99.99</h5>
+				</div>
+			</div>
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/jar/jarJumbo.jpg" alt="Large Sized O2Jar" title="Large Sized O2Jar"></div>
+				<div class="product-info">
+					<h4>Jumbo Sized O2Jar</h4>
+					<h5>$99.99</h5>
+				</div>
+			</div>
+		</div>
+		<!-- BOXES -->
+		<div class="products">
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/box/boxS.jpg" alt="Small Sized O2Box" title="Small Sized O2Box"></div>
+				<div class="product-info">
+					<h4>Small Sized O2Jar</h4>
+					<h5>$99.99</h5>
+				</div>
+			</div>
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/box/boxM.jpg" alt="Medium Sized O2Box" title="Medium Sized O2Box"></div>
+				<div class="product-info">
+					<h4>Medium Sized O2Jar</h4>
+					<h5>$99.99</h5>
+				</div>
+			</div>
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/box/boxL.jpg" alt="Large Sized O2Box" title="Large Sized O2Box"></div>
+				<div class="product-info">
+					<h4>Large Sized O2Jar</h4>
+					<h5>$99.99</h5>
+				</div>
+			</div>
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/box/boxXL.jpg" alt="XL Sized O2Box" title="XL Sized O2Box"></div>
+				<div class="product-info">
+					<h4>Large Sized O2Jar</h4>
+					<h5>$99.99</h5>
+				</div>
+			</div>	
+		</div>
+	</main>
 	
 </body>
 </html>

@@ -61,6 +61,28 @@ nav ul li a {
 	height: 100%;
 }
 
+/* ------ PRODUCT SECTION ------- */
+.products {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product-card {
+	display: flex;
+	flex-direction: column;
+	padding: 2%;
+	flex: 1 16%;
+}
+
+.product-image img {
+	max-width: 100%;	
+}
+
+.product-info {
+	margin-top: auto;
+	text-align: center;
+}
+
 /* ------ REGISTRATION & LOGIN ------ */
 .registration-container, .login-container {
 	background-color: #4268f4;
