@@ -83,6 +83,10 @@ nav ul li a {
 	text-align: center;
 }
 
+.product-section h2 {
+	margin: 10px 0 0 10px;
+}
+
 /* ------ REGISTRATION & LOGIN ------ */
 .registration-container, .login-container {
 	background-color: #4268f4;

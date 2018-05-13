@@ -37,67 +37,71 @@
 	<!-- Product Section -->
 	<main class="product-section">
 		<!-- JARS -->
+		<h2>The classic O2Jars - Fun for the whole family.</h2>
 		<div class="products">
 			<div class="product-card">
-				<div class="product-image"><img src="images/products/jar/jarS.jpg" alt="Small Sized O2Jar" title="Small Sized O2Jar"></div>
+				<div class="product-image"><img src="images/products/jar/jarS.jpg" alt="Small O2Jar" title="Small O2Jar"></div>
 				<div class="product-info">
-					<h4>Small Sized O2Jar</h4>
+					<h4>Small O2Jar</h4>
+					<h5>$19.99</h5>
+				</div>
+			</div>
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/jar/jarM.jpg" alt="Medium O2Jar" title="Medium O2Jar"></div>
+				<div class="product-info">
+					<h4>Medium O2Jar</h4>
+					<h5>$49.99</h5>
+				</div>
+			</div>
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/jar/jarL.jpg" alt="Large O2Jar" title="Large O2Jar"></div>
+				<div class="product-info">
+					<h4>Large O2Jar</h4>
 					<h5>$99.99</h5>
 				</div>
 			</div>
 			<div class="product-card">
-				<div class="product-image"><img src="images/products/jar/jarM.jpg" alt="Medium Sized O2Jar" title="Medium Sized O2Jar"></div>
+				<div class="product-image"><img src="images/products/jar/jarJumbo.jpg" alt="Jumbo O2Jar" title="Jumbo O2Jar"></div>
 				<div class="product-info">
-					<h4>Medium Sized O2Jar</h4>
-					<h5>$99.99</h5>
-				</div>
-			</div>
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/jar/jarL.jpg" alt="Large Sized O2Jar" title="Large Sized O2Jar"></div>
-				<div class="product-info">
-					<h4>Large Sized O2Jar</h4>
-					<h5>$99.99</h5>
-				</div>
-			</div>
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/jar/jarJumbo.jpg" alt="Large Sized O2Jar" title="Large Sized O2Jar"></div>
-				<div class="product-info">
-					<h4>Jumbo Sized O2Jar</h4>
-					<h5>$99.99</h5>
+					<h4>Jumbo O2Jar</h4>
+					<h5>$169.69</h5>
 				</div>
 			</div>
 		</div>
 		<!-- BOXES -->
+		<h2>The O2Box - Amazing party essential at an affordable price!</h2>
 		<div class="products">
 			<div class="product-card">
-				<div class="product-image"><img src="images/products/box/boxS.jpg" alt="Small Sized O2Box" title="Small Sized O2Box"></div>
+				<div class="product-image"><img src="images/products/box/boxS.jpg" alt="Small O2Box" title="Small O2Box"></div>
 				<div class="product-info">
-					<h4>Small Sized O2Jar</h4>
+					<h4>Small O2Box</h4>
 					<h5>$99.99</h5>
 				</div>
 			</div>
 			<div class="product-card">
-				<div class="product-image"><img src="images/products/box/boxM.jpg" alt="Medium Sized O2Box" title="Medium Sized O2Box"></div>
+				<div class="product-image"><img src="images/products/box/boxM.jpg" alt="Medium O2Box" title="Medium O2Box"></div>
 				<div class="product-info">
-					<h4>Medium Sized O2Jar</h4>
-					<h5>$99.99</h5>
+					<h4>Medium O2Box</h4>
+					<h5>$199.99</h5>
 				</div>
 			</div>
 			<div class="product-card">
-				<div class="product-image"><img src="images/products/box/boxL.jpg" alt="Large Sized O2Box" title="Large Sized O2Box"></div>
+				<div class="product-image"><img src="images/products/box/boxL.jpg" alt="Large O2Box" title="Large O2Box"></div>
 				<div class="product-info">
-					<h4>Large Sized O2Jar</h4>
-					<h5>$99.99</h5>
+					<h4>Large O2Box</h4>
+					<h5>$299.99</h5>
 				</div>
 			</div>
 			<div class="product-card">
-				<div class="product-image"><img src="images/products/box/boxXL.jpg" alt="XL Sized O2Box" title="XL Sized O2Box"></div>
+				<div class="product-image"><img src="images/products/box/boxXL.jpg" alt="XL O2Box" title="XL O2Box"></div>
 				<div class="product-info">
-					<h4>Large Sized O2Jar</h4>
-					<h5>$99.99</h5>
+					<h4>Extra Large O2Jar</h4>
+					<h5>$449.99</h5>
 				</div>
 			</div>	
 		</div>
+		
+		
 	</main>
 	
 </body>
