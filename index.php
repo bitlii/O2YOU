@@ -23,6 +23,7 @@
 			<li class="current"><a href="">HOME</a></li>
 			<li><a href="index.php#jars">JARS</a></li>
 			<li><a href="index.php#boxes">BOXES</a></li>
+			<li><a href="index.php#accessories">ACCESSORIES</a></li>
 		</ul>
 		<ul id="nav-right">
 			<li><a href="registration.php">REGISTER</a></li>
@@ -40,6 +41,7 @@
 	
 	<!-- Product Section -->
 	<main class="product-section">
+		
 		<!-- JARS -->
 		<h2 id="jars">The classic O2Jars - Fun for the whole family.</h2>
 		<div class="products">
@@ -72,6 +74,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<!-- BOXES -->
 		<h2 id="boxes">The O2Box - Amazing party essential at an affordable price!</h2>
 		<div class="products">
@@ -105,8 +108,38 @@
 			</div>	
 		</div>
 		
-		
+		<!-- ACCESSORIES -->
+		<h2 id="accessories">Accessories - Improve your breathing game with these amazing products!</h2>
+		<div class="products">
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/accessories/o2mask.jpg" alt="O2Mask" title="O2Mask"></div>
+				<div class="product-info">
+					<h4>O2Mask</h4>
+					<h5>$49.99</h5>
+				</div>
+			</div>
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/accessories/o2techmaskx.jpg" alt="O2Mask X" title="O2Mask X"></div>
+				<div class="product-info">
+					<h4>O2Mask X</h4>
+					<h5>$999.99</h5>
+				</div>
+			</div>
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/accessories/o2tank.jpg" alt="O2Tank" title="O2Tank"></div>
+				<div class="product-info">
+					<h4>O2Tank</h4>
+					<h5>$149.99</h5>
+				</div>
+			</div>
+			<div class="product-card">
+				<div class="product-image"><img src="images/products/accessories/o2backpack.jpg" alt="O2Backpack" title="O2Backpack"></div>
+				<div class="product-info">
+					<h4>O2Backpack</h4>
+					<h5>$454.49</h5>
+				</div>
+			</div>
+		</div>
 	</main>
-	
 </body>
 </html>
