@@ -28,7 +28,7 @@ nav {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 nav ul {
@@ -53,7 +53,7 @@ nav ul li a {
 
 /* ------ SECTION BANNER ------ */
 .banner-container {
-  	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .banner {
@@ -72,6 +72,7 @@ nav ul li a {
 	flex-direction: column;
 	padding: 2%;
 	flex: 1 16%;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .product-image img {
