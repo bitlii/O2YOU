@@ -91,13 +91,23 @@ nav ul li a {
 .registration-container, .login-container {
 	background-color: #4268f4;
 	text-align: center;
+	margin: 150px 0;
+}
+
+.title {
+	font-weight: 300;
+	font-size: 3em;
+}
+
+.title a {
+	text-decoration: none;
+	color: white;
 }
 
 .form-container {
 	background-color: #4268f4;
 	position: relative;
 	max-width: 400px;
-  	padding: 5em;
 	margin: 0 auto;
 }
 
@@ -114,12 +124,11 @@ nav ul li a {
 #registration, #login {
 	background-color: #F9F9F9;
 	padding: 20px;
-	margin: 150px 0;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 #registration h1, #login h1 {
-	font-weight: 300px;
+	font-weight: 300;
 	margin-bottom: 10px;
 }
 

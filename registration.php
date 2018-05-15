@@ -7,6 +7,7 @@
 	
 </head>
 <body class="registration-container">
+	<h1 class="title"><a href="index.php"/>O2YOU</a></h1>
 	<div class="form-container">
 		<form id="registration"	name="registration-form" method="post" action="" enctype="multipart/formdata">
 			<h1>Registration</h1>

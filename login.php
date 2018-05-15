@@ -7,6 +7,7 @@
 	
 </head>
 <body class="login-container">
+	<h1 class="title"><a href="index.php"/>O2YOU</a></h1>
 	<div class="form-container">
 		<form id="login" name="login-form" method="post" action="" enctype="multipart/formdata">
 			<h1>Login</h1>
