@@ -102,7 +102,7 @@
 			<div class="product-card">
 				<div class="product-image"><img src="images/products/box/boxXL.jpg" alt="XL O2Box" title="XL O2Box"></div>
 				<div class="product-info">
-					<h4>Extra Large O2Jar</h4>
+					<h4>Extra Large O2Box</h4>
 					<h5>$449.99</h5>
 				</div>
 			</div>	
