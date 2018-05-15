@@ -13,6 +13,7 @@
 			<div class="form-element"><input name="email" type="text" required="required" class="text-field" placeholder="Email"></div>
 			<div class="form-element"><input name="password" type="text" required="required" class="text-field" placeholder="Password"></div>
 			<div class="form-element"><input name="log-in" type="submit" class="button" value="LOG IN"></div>
+			<p class="message">Don't have an account? <a href="registration.php">Register now!</a></p>
 		</form>
 </div>
 </body>

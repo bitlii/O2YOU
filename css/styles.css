@@ -10,7 +10,7 @@
 /* HEADER */
 header {
 	font-size: 1.5em;
-	background-color: #64b5f6;
+	background-color: #4268f4;
 }
 
 header h1 {
@@ -23,7 +23,7 @@ header h1 {
 
 /* NAVIGATION */
 nav {
-	background-color: #64b5f6;
+	background-color: #4268f4;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -102,7 +102,7 @@ nav ul li a {
 }
 
 .text-field {
-	background: #f2f2f2;
+	background-color: #f2f2f2;
 	width: 100%;
 	border: 0;
 	margin: 0 0 15px;
@@ -112,19 +112,30 @@ nav ul li a {
 }
 
 #registration, #login {
-	background: #F9F9F9;
-	padding: 50px;
+	background-color: #F9F9F9;
+	padding: 20px;
 	margin: 150px 0;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 #registration h1, #login h1 {
-	font-weight: 300;
+	font-weight: 300px;
 	margin-bottom: 10px;
 }
 
+.message {
+	margin: 15px 0 0;
+	color: #b3b3b3;
+	font-size: 12px;
+}
+
+.message a {
+	text-decoration: none;
+	color: black;
+}
+
 .button {
-  	background: #4CAF50;
+  	background-color: #4CAF50;
 	color: #FFFFFF;
   	margin: 0 0 5px;
   	border: 0;

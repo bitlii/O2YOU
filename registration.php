@@ -16,6 +16,7 @@
 			<div class="form-element"><input name="password" type="text" required="required" class="text-field" placeholder="Password"></div>
 			<div class="form-element"><input name="confirm-password" type="text" required="required" class="text-field" placeholder="Confirm Password"></div>
 			<div class="form-element"><input name="sign-up" type="submit" class="button" value="SIGN UP"></div>
+			<p class="message">Already have an account? <a href="login.php">Login now!</a></p>
 		</form>
 </div>
 </body>
