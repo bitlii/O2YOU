@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<title>O2YOU - Registration</title>
 	
@@ -7,7 +7,7 @@
 	
 </head>
 <body class="profile-container">
-	<h1 class="title"><a href="index.php"/>O2YOU</a></h1>
+	<h1 class="title"><a href="index.php">O2YOU</a></h1>
 	<div class="form-container">
 		<form id="update-profile" name="update-form" method="post" action="">
 			<h1 class="form-title">Update Profile</h1>

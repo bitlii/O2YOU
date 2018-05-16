@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<title>O2YOU - Login</title>
 	
@@ -7,9 +7,9 @@
 	
 </head>
 <body class="login-container">
-	<h1 class="title"><a href="index.php"/>O2YOU</a></h1>
+	<h1 class="title"><a href="index.php">O2YOU</a></h1>
 	<div class="form-container">
-		<form id="login" name="login-form" method="post" action="" enctype="multipart/formdata">
+		<form id="login" name="login-form" method="post" action="">
 			<h1 class="form-title">Login</h1>
 			<div class="form-element"><input name="email" type="text" required="required" class="text-field" placeholder="Email"></div>
 			<div class="form-element"><input name="password" type="text" required="required" class="text-field" placeholder="Password"></div>

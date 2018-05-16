@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<title>O2YOU - The number one marketplace for your oxygen needs</title>
 	
