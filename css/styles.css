@@ -9,6 +9,7 @@
 
 /* HEADER */
 header {
+	color: white;
 	font-size: 1.5em;
 	background-color: #4268f4;
 }
@@ -48,7 +49,7 @@ nav ul li:hover {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
 }	
 
 /* ------ SECTION BANNER ------ */
@@ -90,7 +91,7 @@ nav ul li a {
 }
 
 /* ------ REGISTRATION & LOGIN ------ */
-.registration-container, .login-container {
+.registration-container, .login-container, .profile-container {
 	background-color: #4268f4;
 	text-align: center;
 	margin: 150px 0;
@@ -123,13 +124,13 @@ nav ul li a {
 	font-size: 14px;
 }
 
-#registration, #login {
+#registration, #login, #update-profile {
 	background-color: #F9F9F9;
 	padding: 20px;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-#registration h1, #login h1 {
+.form-title {
 	font-weight: 300;
 	margin-bottom: 10px;
 }

@@ -35,7 +35,7 @@
 	<!-- Promotion Banner -->
 	<section>
 		<div class="banner-container">
-			<img class="banner" src="images/banners/oxyBottleBannerWide.png" alt="oxyBottle Banner">
+			<img class="banner" src="images/banners/oBottleProBanner.png" alt="oBottle Pro Banner">
 		</div>
 	</section>
 	
