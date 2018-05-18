@@ -1,3 +1,26 @@
+<?php
+session_start();
+include"conn.php";
+?>
+<?php
+if (isset($_POST['sign-up'])) {
+
+	$FName = $_POST['first-name'];
+	$LName = $_POST['last-name'];
+	$Email = $_POST['email'];
+	$Password = $_POST['password'];
+	$ConfirmPassword = $_POST['confirm-password'];
+	
+	if ($Password === $ConfirmPassword) {
+		$sql = $conn->query("INSERT INTO users (firstName, lastName, email, password) Values('$FName','$LName', '$Email', '$Password')");
+		header('Location: login.php');
+	}
+	else {
+		echo "<script type='text/javascript'>alert('Registration failed! Please check if your password matches.')</script>";
+	}
+}
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
