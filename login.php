@@ -1,3 +1,35 @@
+<?php
+session_start();
+include"conn.php";
+?>
+<?php
+if (isset($_POST['log-in'])) {
+	$LoginEmail = $_POST['email'];
+	$LoginPassword = $_POST['password'];
+	$result = $conn->query("select * from users where email='$LoginEmail' and password='$LoginPassword'");
+	$row = $result->fetch_array();
+	
+	$Email = $row['email'];
+	$Password = $row['password'];
+	$id = $row['userID'];
+	
+	$_SESSION['UserID'] = $row['userID'];
+	
+	if($LoginEmail===$Email && $LoginPassword===$Password)
+	{
+?>
+	<script>window.location = "index.php?id=<?php echo $id;?>";</script>
+<?php
+	}
+	else{
+?>
+	<script>alert('Invalid Login');</script>
+<?php
+	}
+	
+}
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
