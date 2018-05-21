@@ -141,6 +141,12 @@ nav ul li a {
 	font-size: 1em;
 }
 
+.success {
+	margin: 0px 0 15px 0;
+	color: green; 
+	font-size: 1em;
+}
+
 .message {
 	margin: 15px 0 0;
 	color: #b3b3b3;
