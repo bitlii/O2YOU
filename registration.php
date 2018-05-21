@@ -10,14 +10,6 @@ if (isset($_POST['sign-up'])) {
 	$Email = $_POST['email'];
 	$Password = $_POST['password'];
 	$ConfirmPassword = $_POST['confirm-password'];
-	
-	if ($Password === $ConfirmPassword) {
-		$sql = $conn->query("INSERT INTO users (firstName, lastName, email, password) Values('$FName','$LName', '$Email', '$Password')");
-		header('Location: login.php');
-	}
-	else {
-		echo "<script type='text/javascript'>alert('Registration failed! Please check if your password matches.')</script>";
-	}
 }
 ?>
 
@@ -39,6 +31,15 @@ if (isset($_POST['sign-up'])) {
 			<div class="form-element"><input name="email" type="text" required="required" class="text-field" placeholder="Email"></div>
 			<div class="form-element"><input name="password" type="text" required="required" class="text-field" placeholder="Password"></div>
 			<div class="form-element"><input name="confirm-password" type="text" required="required" class="text-field" placeholder="Confirm Password"></div>
+			<p class="error"><?php
+				if (isset($_POST['sign-up'])) {
+					if ($Password === $ConfirmPassword) {
+						$sql = $conn->query("INSERT INTO users (firstName, lastName, email, password) Values('$FName','$LName', '$Email', '$Password')");
+						header('Location: login.php');
+					} else {
+						echo "Passwords do not match!";
+					}
+				}?></p>
 			<div class="form-element"><input name="sign-up" type="submit" class="button" value="SIGN UP"></div>
 			<p class="message">Already have an account? <a href="login.php">Login now!</a></p>
 		</form>

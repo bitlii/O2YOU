@@ -14,22 +14,9 @@ if (isset($_POST['log-in'])) {
 	$id = $row['userID'];
 	
 	$_SESSION['UserID'] = $row['userID'];
-	
-	if($LoginEmail===$Email && $LoginPassword===$Password)
-	{
-?>
-	<script>window.location = "index.php?id=<?php echo $id;?>";</script>
-<?php
-	}
-	else{
-?>
-	<script>alert('Invalid Login');</script>
-<?php
-	}
-	
 }
 ?>
-
+	
 <!doctype html>
 <html lang="en">
 <head>
@@ -45,6 +32,17 @@ if (isset($_POST['log-in'])) {
 			<h1 class="form-title">Login</h1>
 			<div class="form-element"><input name="email" type="text" required="required" class="text-field" placeholder="Email"></div>
 			<div class="form-element"><input name="password" type="text" required="required" class="text-field" placeholder="Password"></div>
+			<p class="error"><?php
+			if (isset($_POST['log-in'])) {
+				if($LoginEmail===$Email && $LoginPassword===$Password) {
+				?>
+					<script>window.location = "index.php?id=<?php echo $id;?>";</script>
+				<?php
+				} else {
+					echo "Invalid Login!";
+				}
+			}
+			?></p>
 			<div class="form-element"><input name="log-in" type="submit" class="button" value="LOG IN"></div>
 			<p class="message">Don't have an account? <a href="registration.php">Register now!</a></p>
 		</form>
