@@ -1,3 +1,8 @@
+<?php
+	session_start();
+	include"conn.php";
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,11 +30,26 @@
 			<li><a href="index.php#boxes">BOXES</a></li>
 			<li><a href="index.php#accessories">ACCESSORIES</a></li>
 		</ul>
+	<?php
+	if (isset($_SESSION["UserID"])){
+		?>
+		<ul id="nav-right">
+			<li><a href="updateprofile.php">PROFILE</a></li>
+			<li><a href="index.php">LOGOFF</a></li>
+			<li class="cart"><a href="cart.php">CART</a></li>
+		</ul>
+	<?php
+	}
+	else {
+		?>
 		<ul id="nav-right">
 			<li><a href="registration.php">REGISTER</a></li>
 			<li><a href="login.php">LOGIN</a></li>
 			<li class="cart"><a href="cart.php">CART</a></li>
 		</ul>
+		<?php
+	}
+	?>
 	</nav>
 
 	<!-- Promotion Banner -->
