@@ -35,7 +35,7 @@
 		?>
 		<ul id="nav-right">
 			<li><a href="updateprofile.php">PROFILE</a></li>
-			<li><a href="index.php">LOGOFF</a></li>
+			<li><a href="<?php unset($_SESSION['UserID'])?>">LOGOUT</a></li>
 			<li class="cart"><a href="cart.php">CART</a></li>
 		</ul>
 	<?php
