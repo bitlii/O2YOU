@@ -2,7 +2,6 @@
 	session_start();
 	include"conn.php";
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -35,7 +34,7 @@
 		?>
 		<ul id="nav-right">
 			<li><a href="updateprofile.php">PROFILE</a></li>
-			<li><a href="<?php unset($_SESSION['UserID'])?>">LOGOUT</a></li>
+			<li><a href="logout.php">LOGOUT</a></li>
 			<li class="cart"><a href="cart.php">CART</a></li>
 		</ul>
 	<?php
