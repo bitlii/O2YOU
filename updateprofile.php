@@ -3,19 +3,20 @@ session_start();
 include "conn.php";
 ?>
 <?php
-	if (isset($_SESSION["UserID"])) {
+	if (isset($_SESSION["User-ID"])) {
 	}
 	else {
 		header('Location: login.php');
 	}
 
-	$User = $_SESSION["UserID"];
-	$result = $conn->query("select * from users where userID='$User'");
+	$User = $_SESSION["User-ID"];
+	$result = $conn->query("select * from users where user-ID='$User'");
 	$row = $result->fetch_array();
 	$_SESSION["FirstName"] = $row['firstName'];
 	$_SESSION["LastName"] = $row['lastName'];
 	$_SESSION["Email"] = $row['email'];
 	$_SESSION["Password"] = $row['password'];
+	$_SESSION["Address"] = $row['address'];
 ?>
 
 <!doctype html>
@@ -35,6 +36,7 @@ include "conn.php";
 			<div class="form-element"><input name="last-name" type="text" required="required" class="text-field" value="<?php echo $_SESSION["LastName"]; ?>"></div>
 			<div class="form-element"><input name="email" type="text" required="required" class="text-field" value="<?php echo $_SESSION["Email"]; ?>"></div>
 			<div class="form-element"><input name="password" type="text" required="required" class="text-field" value="<?php echo $_SESSION["Password"]; ?>"></div>
+			<div class="form-element"><input name="address" type="text" required="required" class="text-field" value="<?php echo $_SESSION["Address"]; ?>"></div>
 			<p class="error"><?php
 				if (isset($_POST['update-profile'])) {
 					$id = $row['userID'];
@@ -42,8 +44,9 @@ include "conn.php";
 					$UpdateLastName = $_POST['last-name'];
 					$UpdateEmail = $_POST['email'];
 					$UpdatePassword = $_POST['password'];
+					$UpdateAddress = $_POST['adress'];
 			
-					$data = $conn->query("UPDATE users SET firstName = '$UpdateFirstName', lastName = '$UpdateLastName', email = '$UpdateEmail', password = '$UpdatePassword' where userID = $User");
+					$data = $conn->query("UPDATE users SET firstName = '$UpdateFirstName', lastName = '$UpdateLastName', email = '$UpdateEmail', password = '$UpdatePassword', address = '$UpdateAddress' where userID = $User");
 					if ($data) { ?>
 					<p class="success"><?php
 						echo "Profile details were successfully updated!"; ?>

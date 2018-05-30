@@ -11,9 +11,9 @@ if (isset($_POST['log-in'])) {
 	
 	$Email = $row['email'];
 	$Password = $row['password'];
-	$id = $row['userID'];
+	$id = $row['user-ID'];
 	
-	$_SESSION['UserID'] = $row['userID'];
+	$_SESSION['User-ID'] = $row['user-ID'];
 }
 ?>
 	
