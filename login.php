@@ -4,16 +4,16 @@ include"conn.php";
 ?>
 <?php
 if (isset($_POST['log-in'])) {
-	$LoginEmail = $_POST['email'];
-	$LoginPassword = $_POST['password'];
-	$result = $conn->query("select * from users where email='$LoginEmail' and password='$LoginPassword'");
+	$loginemail = $_POST['email'];
+	$loginpassword = $_POST['password'];
+	$result = $conn->query("select * from users where email='$loginemail' and password='$loginpassword'");
 	$row = $result->fetch_array();
 	
-	$Email = $row['email'];
-	$Password = $row['password'];
-	$id = $row['user-ID'];
+	$email = $row['email'];
+	$password = $row['password'];
+	$id = $row['userID'];
 	
-	$_SESSION['User-ID'] = $row['user-ID'];
+	$_SESSION['UserID'] = $row['userID'];
 }
 ?>
 	
@@ -34,7 +34,7 @@ if (isset($_POST['log-in'])) {
 			<div class="form-element"><input name="password" type="text" required="required" class="text-field" placeholder="Password"></div>
 			<p class="error"><?php
 			if (isset($_POST['log-in'])) {
-				if($LoginEmail===$Email && $LoginPassword===$Password) {
+				if($loginemail===$email && $loginpassword===$password) {
 				?>
 					<script>window.location = "index.php?id=<?php echo $id;?>";</script>
 				<?php

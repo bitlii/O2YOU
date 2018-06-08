@@ -5,12 +5,12 @@ include"conn.php";
 <?php
 if (isset($_POST['sign-up'])) {
 
-	$FName = $_POST['first-name'];
-	$LName = $_POST['last-name'];
-	$Email = $_POST['email'];
-	$Password = $_POST['password'];
-	$Address = $_POST['address'];
-	$ConfirmPassword = $_POST['confirm-password'];
+	$fname = $_POST['first-name'];
+	$lname = $_POST['last-name'];
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$address = $_POST['address'];
+	$confirmpassword = $_POST['confirm-password'];
 }
 ?>
 
@@ -30,13 +30,13 @@ if (isset($_POST['sign-up'])) {
 			<div class="form-element"><input name="first-name" type="text" required="required" class="text-field" placeholder="First Name"></div>
 			<div class="form-element"><input name="last-name" type="text" required="required" class="text-field" placeholder="Last Name"></div>
 			<div class="form-element"><input name="email" type="text" required="required" class="text-field" placeholder="Email"></div>
-			<div class="form-element"><input name="password" type="text" required="required" class="text-field" placeholder="Password"></div>
 			<div class="form-element"><input name="address" type="text" required="required" class="text-field" placeholder="Address"></div>
+			<div class="form-element"><input name="password" type="text" required="required" class="text-field" placeholder="Password"></div>
 			<div class="form-element"><input name="confirm-password" type="text" required="required" class="text-field" placeholder="Confirm Password"></div>
 			<p class="error"><?php
 				if (isset($_POST['sign-up'])) {
-					if ($Password === $ConfirmPassword) {
-						$sql = $conn->query("INSERT INTO users (first-name, last-name, email, password, address) Values('$FName','$LName', '$Email', '$Password', '$Address')");
+					if ($password === $confirmpassword) {
+						$sql = $conn->query("INSERT INTO users (firstname, lastname, email, password, address) Values('$fname','$lname', '$email', '$password', '$address')");
 						header('Location: login.php');
 					} else {
 						echo "Passwords do not match!";

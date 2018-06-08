@@ -3,20 +3,20 @@ session_start();
 include "conn.php";
 ?>
 <?php
-	if (isset($_SESSION["User-ID"])) {
+	if (isset($_SESSION["UserID"])) {
 	}
 	else {
 		header('Location: login.php');
 	}
 
-	$User = $_SESSION["User-ID"];
-	$result = $conn->query("select * from users where user-ID='$User'");
+	$user = $_SESSION["UserID"];
+	$result = $conn->query("select * from users where userID='$user'");
 	$row = $result->fetch_array();
-	$_SESSION["FirstName"] = $row['firstName'];
-	$_SESSION["LastName"] = $row['lastName'];
-	$_SESSION["Email"] = $row['email'];
-	$_SESSION["Password"] = $row['password'];
-	$_SESSION["Address"] = $row['address'];
+	$_SESSION["firstname"] = $row['firstname'];
+	$_SESSION["lastname"] = $row['lastname'];
+	$_SESSION["email"] = $row['email'];
+	$_SESSION["password"] = $row['password'];
+	$_SESSION["address"] = $row['address'];
 ?>
 
 <!doctype html>
@@ -32,21 +32,21 @@ include "conn.php";
 	<div class="form-container">
 		<form id="update-profile" name="update-form" method="post" action="">
 			<h1 class="form-title">Update Profile</h1>
-			<div class="form-element"><input name="first-name" type="text" required="required" class="text-field" value="<?php echo $_SESSION["FirstName"]; ?>"></div>
-			<div class="form-element"><input name="last-name" type="text" required="required" class="text-field" value="<?php echo $_SESSION["LastName"]; ?>"></div>
-			<div class="form-element"><input name="email" type="text" required="required" class="text-field" value="<?php echo $_SESSION["Email"]; ?>"></div>
-			<div class="form-element"><input name="password" type="text" required="required" class="text-field" value="<?php echo $_SESSION["Password"]; ?>"></div>
-			<div class="form-element"><input name="address" type="text" required="required" class="text-field" value="<?php echo $_SESSION["Address"]; ?>"></div>
+			<div class="form-element"><input name="first-name" type="text" required="required" class="text-field" value="<?php echo $_SESSION["firstname"]; ?>"></div>
+			<div class="form-element"><input name="last-name" type="text" required="required" class="text-field" value="<?php echo $_SESSION["lastname"]; ?>"></div>
+			<div class="form-element"><input name="email" type="text" required="required" class="text-field" value="<?php echo $_SESSION["email"]; ?>"></div>
+			<div class="form-element"><input name="password" type="text" required="required" class="text-field" value="<?php echo $_SESSION["password"]; ?>"></div>
+			<div class="form-element"><input name="address" type="text" required="required" class="text-field" value="<?php echo $_SESSION["address"]; ?>"></div>
 			<p class="error"><?php
 				if (isset($_POST['update-profile'])) {
 					$id = $row['userID'];
-					$UpdateFirstName = $_POST['first-name'];
-					$UpdateLastName = $_POST['last-name'];
-					$UpdateEmail = $_POST['email'];
-					$UpdatePassword = $_POST['password'];
-					$UpdateAddress = $_POST['adress'];
+					$updatefirstname = $_POST['first-name'];
+					$updatelastname = $_POST['last-name'];
+					$updateemail = $_POST['email'];
+					$updatepassword = $_POST['password'];
+					$updateaddress = $_POST['address'];
 			
-					$data = $conn->query("UPDATE users SET firstName = '$UpdateFirstName', lastName = '$UpdateLastName', email = '$UpdateEmail', password = '$UpdatePassword', address = '$UpdateAddress' where userID = $User");
+					$data = $conn->query("UPDATE users SET firstname = '$updatefirstname', lastname = '$updatelastname', email = '$updateemail', password = '$updatepassword', address = '$updateaddress' where userID = $user");
 					if ($data) { ?>
 					<p class="success"><?php
 						echo "Profile details were successfully updated!"; ?>
