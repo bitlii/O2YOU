@@ -1,15 +1,15 @@
+<!-- PHP Connection -->
 <?php
 	session_start();
 	include"conn.php";
 ?>
-<!doctype html>
 <html lang="en">
 <head>
 	<title>O2YOU - The number one marketplace for your oxygen needs</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
-	<!-- META -->
+	<!-- Meta Data -->
 	<meta charset="utf-8"/>
     <meta name="author" content="Jackie Chen"/>
     <meta name="description" content="O2YOU's is the worlds biggest oxygen marketplace with a wide selection of oxygen ready to ship at moments notice."/>

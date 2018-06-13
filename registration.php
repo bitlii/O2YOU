@@ -13,8 +13,6 @@ if (isset($_POST['sign-up'])) {
 	$confirmpassword = $_POST['confirm-password'];
 }
 ?>
-
-<!doctype html>
 <html lang="en">
 <head>
 	<title>O2YOU - Registration</title>
@@ -31,8 +29,8 @@ if (isset($_POST['sign-up'])) {
 			<div class="form-element"><input name="last-name" type="text" required="required" class="text-field" placeholder="Last Name"></div>
 			<div class="form-element"><input name="email" type="text" required="required" class="text-field" placeholder="Email"></div>
 			<div class="form-element"><input name="address" type="text" required="required" class="text-field" placeholder="Address"></div>
-			<div class="form-element"><input name="password" type="text" required="required" class="text-field" placeholder="Password"></div>
-			<div class="form-element"><input name="confirm-password" type="text" required="required" class="text-field" placeholder="Confirm Password"></div>
+			<div class="form-element"><input name="password" type="password" required="required" class="text-field" placeholder="Password"></div>
+			<div class="form-element"><input name="confirm-password" type="password" required="required" class="text-field" placeholder="Confirm Password"></div>
 			<p class="error"><?php
 				if (isset($_POST['sign-up'])) {
 					if ($password === $confirmpassword) {

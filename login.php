@@ -3,6 +3,7 @@ session_start();
 include"conn.php";
 ?>
 <?php
+// When the login button is pressed -> grabs inputted info, assigns it to a variable & checks if it's in database.
 if (isset($_POST['log-in'])) {
 	$loginemail = $_POST['email'];
 	$loginpassword = $_POST['password'];
@@ -16,8 +17,6 @@ if (isset($_POST['log-in'])) {
 	$_SESSION['UserID'] = $row['userID'];
 }
 ?>
-	
-<!doctype html>
 <html lang="en">
 <head>
 	<title>O2YOU - Login</title>
@@ -31,8 +30,9 @@ if (isset($_POST['log-in'])) {
 		<form id="login" name="login-form" method="post" action="">
 			<h1 class="form-title">Login</h1>
 			<div class="form-element"><input name="email" type="text" required="required" class="text-field" placeholder="Email"></div>
-			<div class="form-element"><input name="password" type="text" required="required" class="text-field" placeholder="Password"></div>
+			<div class="form-element"><input name="password" type="password" required="required" class="text-field" placeholder="Password"></div>
 			<p class="error"><?php
+			// Checks if inputted login/password matches to an entry in the db.
 			if (isset($_POST['log-in'])) {
 				if($loginemail===$email && $loginpassword===$password) {
 				?>

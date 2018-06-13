@@ -18,8 +18,6 @@ include "conn.php";
 	$_SESSION["password"] = $row['password'];
 	$_SESSION["address"] = $row['address'];
 ?>
-
-<!doctype html>
 <html lang="en">
 <head>
 	<title>O2YOU - Registration</title>
@@ -35,7 +33,7 @@ include "conn.php";
 			<div class="form-element"><input name="first-name" type="text" required="required" class="text-field" value="<?php echo $_SESSION["firstname"]; ?>"></div>
 			<div class="form-element"><input name="last-name" type="text" required="required" class="text-field" value="<?php echo $_SESSION["lastname"]; ?>"></div>
 			<div class="form-element"><input name="email" type="text" required="required" class="text-field" value="<?php echo $_SESSION["email"]; ?>"></div>
-			<div class="form-element"><input name="password" type="text" required="required" class="text-field" value="<?php echo $_SESSION["password"]; ?>"></div>
+			<div class="form-element"><input name="password" type="password" required="required" class="text-field" value="<?php echo $_SESSION["password"]; ?>"></div>
 			<div class="form-element"><input name="address" type="text" required="required" class="text-field" value="<?php echo $_SESSION["address"]; ?>"></div>
 			<p class="error"><?php
 				if (isset($_POST['update-profile'])) {
