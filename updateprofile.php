@@ -1,8 +1,10 @@
+<!-- PHP Connection -->
 <?php
 session_start();
 include "conn.php";
 ?>
 <?php
+// If the session user matches the user's session id -> show their user details.
 	if (isset($_SESSION["UserID"])) {
 	}
 	else {
@@ -32,10 +34,11 @@ include "conn.php";
 			<h1 class="form-title">Update Profile</h1>
 			<div class="form-element"><input name="first-name" type="text" required="required" class="text-field" value="<?php echo $_SESSION["firstname"]; ?>"></div>
 			<div class="form-element"><input name="last-name" type="text" required="required" class="text-field" value="<?php echo $_SESSION["lastname"]; ?>"></div>
-			<div class="form-element"><input name="email" type="text" required="required" class="text-field" value="<?php echo $_SESSION["email"]; ?>"></div>
+			<div class="form-element"><input name="email" type="email" required="required" class="text-field" value="<?php echo $_SESSION["email"]; ?>"></div>
 			<div class="form-element"><input name="password" type="password" required="required" class="text-field" value="<?php echo $_SESSION["password"]; ?>"></div>
 			<div class="form-element"><input name="address" type="text" required="required" class="text-field" value="<?php echo $_SESSION["address"]; ?>"></div>
 			<p class="error"><?php
+				// If the update profile button is pressed.
 				if (isset($_POST['update-profile'])) {
 					$id = $row['userID'];
 					$updatefirstname = $_POST['first-name'];
