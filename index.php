@@ -69,6 +69,7 @@
 				<div class="product-info">
 					<h4>Small O2Jar</h4>
 					<h5>$19.99</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>
 			<div class="product-card">
@@ -76,6 +77,7 @@
 				<div class="product-info">
 					<h4>Medium O2Jar</h4>
 					<h5>$49.99</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>
 			<div class="product-card">
@@ -83,6 +85,7 @@
 				<div class="product-info">
 					<h4>Large O2Jar</h4>
 					<h5>$99.99</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>
 			<div class="product-card">
@@ -90,6 +93,7 @@
 				<div class="product-info">
 					<h4>Jumbo O2Jar</h4>
 					<h5>$169.69</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>
 		</div>
@@ -102,6 +106,7 @@
 				<div class="product-info">
 					<h4>Small O2Box</h4>
 					<h5>$99.99</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>
 			<div class="product-card">
@@ -109,6 +114,7 @@
 				<div class="product-info">
 					<h4>Medium O2Box</h4>
 					<h5>$199.99</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>
 			<div class="product-card">
@@ -116,6 +122,7 @@
 				<div class="product-info">
 					<h4>Large O2Box</h4>
 					<h5>$299.99</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>
 			<div class="product-card">
@@ -123,6 +130,7 @@
 				<div class="product-info">
 					<h4>Extra Large O2Box</h4>
 					<h5>$449.99</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>	
 		</div>
@@ -135,6 +143,7 @@
 				<div class="product-info">
 					<h4>O2Mask</h4>
 					<h5>$49.99</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>
 			<div class="product-card">
@@ -142,6 +151,7 @@
 				<div class="product-info">
 					<h4>O2Mask X</h4>
 					<h5>$999.99</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>
 			<div class="product-card">
@@ -149,6 +159,7 @@
 				<div class="product-info">
 					<h4>O2Tank</h4>
 					<h5>$149.99</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>
 			<div class="product-card">
@@ -156,6 +167,7 @@
 				<div class="product-info">
 					<h4>O2Backpack</h4>
 					<h5>$454.49</h5>
+					<button class="button" name="add-to-cart">Add to Cart</button>
 				</div>
 			</div>
 		</div>
