@@ -16,7 +16,7 @@
 	<!-- Navigation Bar -->
 	<nav>
 		<ul id="nav-left">
-			<li class="current"><a href="">HOME</a></li>
+			<li><a href="index.php">HOME</a></li>
 			<li><a href="index.php#jars">JARS</a></li>
 			<li><a href="index.php#boxes">BOXES</a></li>
 			<li><a href="index.php#accessories">ACCESSORIES</a></li>
