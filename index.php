@@ -91,6 +91,7 @@ if(isset($_POST["add-to-cart"])) {
 	<main class="product-section">
 		<!-- JARS -->
 		<h2 id="jars">The classic O2Jars - Fun for the whole family.</h2>
+		<div class="products">
 		<?php
 			$query = "SELECT * FROM products WHERE producttype = 'Jar' ORDER BY productID ASC";
 			$result = mysqli_query($connect, $query);
@@ -99,61 +100,23 @@ if(isset($_POST["add-to-cart"])) {
 				while($row = mysqli_fetch_array($result))
 				{
 			?>
-			<div class="product-card">
-				<form method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
-					<div class="product-image"><img src="images/products/<?php echo $row["productimage"]; ?>"/></div>
-					<div class="product-info">
-						<h4><?php echo $row["productname"]; ?></h4>
-						<h5>$ <?php echo $row["productprice"]; ?></h5>
-						<input type="text" name="quantity" value="1"/>
-						<input type="hidden" name="hidden-name" value="<?php echo $row["productname"]; ?>" />
-						<input type="hidden" name="hidden-price" value="<?php echo $row["productprice"]; ?>" />
-						<input type="submit" name="add-to-cart" class="button" value="Add to Cart" />
-					</div>
-				</form>
-			</div>
+			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
+				<div class="product-image"><img src="images/products/<?php echo $row["productimage"]; ?>"></div>
+				<div class="product-info">
+					<h4><?php echo $row["productname"]; ?></h4>
+					<h5>$ <?php echo $row["productprice"]; ?></h5>
+					<input type="text" name="quantity" value="1"/>
+					<input type="hidden" name="hidden-name" value="<?php echo $row["productname"]; ?>" />
+					<input type="hidden" name="hidden-price" value="<?php echo $row["productprice"]; ?>" />
+					<input type="submit" name="add-to-cart" class="button" value="Add to Cart" />
+				</div>
+			</form>
 		<?php
 				}
 			}
 		?>
-			<form class="product-card"  method="post" action="index.php?action=add&id=1">
-				<div class="product-image"><img src="images/products/jar/jarS.jpg" alt="Small O2Jar" title="Small O2Jar"></div>
-				<div class="product-info">
-					<h4>Small O2Jar</h4>
-					<input type="hidden" name="hidden-name" value="Small O2Jar"></input>
-					<h5>$49.99</h5>
-					<input type="hidden" name="hidden-price" value="19.99"></input>
-					<input type="text" name="quantity" value="1" class="form-control"/>
-					<input type="submit" class="button" name="add-to-cart">Add to Cart</input>
-			</form>
-			<form class="product-card"  method="post" action="index.php?action=add&id=2">
-				<div class="product-image"><img src="images/products/jar/jarM.jpg" alt="Medium O2Jar" title="Medium O2Jar"></div>
-				<div class="product-info">
-					<h4>Medium O2Jar</h4>
-					<input type="hidden" name="hidden-name" value="Medium O2Jar"></input>
-					<h5>$49.99</h5>
-					<input type="hidden" name="hidden-price" value="49.99"></input>
-					<input type="text" name="quantity" value="1" class="form-control"/>
-					<input type="submit" class="button" name="add-to-cart">Add to Cart</input>
-				</div>
-			</form>
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/jar/jarL.jpg" alt="Large O2Jar" title="Large O2Jar"></div>
-				<div class="product-info">
-					<h4>Large O2Jar</h4>
-					<h5>$99.99</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
-				</div>
-			</div>
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/jar/jarJumbo.jpg" alt="Jumbo O2Jar" title="Jumbo O2Jar"></div>
-				<div class="product-info">
-					<h4>Jumbo O2Jar</h4>
-					<h5>$169.69</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
-				</div>
-			</div>
 		</div>
+		
 		<!-- BOXES -->
 		<h2 id="boxes">The O2Box - Amazing party essential at an affordable price!</h2>
 		<div class="products">
