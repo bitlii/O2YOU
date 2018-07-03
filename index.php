@@ -1,8 +1,37 @@
 <!-- PHP Connection -->
 <?php
-	session_start();
-	include"conn.php";
+session_start();
+$connect = mysqli_connect("localhost", "root", "", "o2you");
+	
+if(isset($_POST["add-to-cart"])) {
+	if(isset($_SESSION['cart'])) {
+		$itemarrayid = array_column($_SESSION["cart"], "item-id");
+		if(!in_array($_GET["id"], $itemarrayid)) {
+			$count = count($_SESSION["cart"]);
+			$itemarray = array(
+				'item-id'			=>	$_GET["id"],
+				'item-name'			=>	$_POST["hidden-name"],
+				'item-price'		=>	$_POST["hidden-price"],
+				'item-quantity'		=>	$_POST["quantity"]
+			);
+			$_SESSION["cart"][$count] = $itemarray;	
+		}
+		else {
+			echo '<script>alert("Item Already Added")</script>';
+		}
+	}
+	else {
+		$itemarray = array(
+			'item-id' 			=> $_GET["id"],
+			'item-name' 		=> $_POST["hidden-name"],
+			'item-price' 		=> $_POST["hidden-price"],
+			'item-quantity' 	=> $_POST["quantity"]
+		);
+		$_SESSION['cart'][0] = $itemarray;
+	}
+}
 ?>
+
 <html lang="en">
 <head>
 	<title>O2YOU - The number one marketplace for your oxygen needs</title>
@@ -60,26 +89,41 @@
 	
 	<!-- Product Section -->
 	<main class="product-section">
-		
+		<?php
+			$query = "SELECT * FROM products WHERE producttype = 'Jar' ORDER BY id ASC";
+			$result = mysqli_query($connect, $query);
+			if(mysqli_num_rows($result) > 0)
+			{
+				while($row = mysqli_fetch_array($result))
+				{
+		?>
 		<!-- JARS -->
 		<h2 id="jars">The classic O2Jars - Fun for the whole family.</h2>
-		<div class="products">
+		<form>
 			<div class="product-card">
 				<div class="product-image"><img src="images/products/jar/jarS.jpg" alt="Small O2Jar" title="Small O2Jar"></div>
 				<div class="product-info">
-					<h4>Small O2Jar</h4>
-					<h5>$19.99</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
+					<h4 name="hidden-name"><?php echo $row["name"]; ?></h4>
+					<h5 name="hidden-price">$ <?php echo $row["price"]; ?></h5>
+					<input type="text" name="quantity" value="1" class="form-control" />
+					<button class="button" name="add-to-cart" action="cart.php?action=add&id=1">Add to Cart</button>
 				</div>
 			</div>
-			<div class="product-card">
+			<?php
+				}
+			}
+		?>
+			<form class="product-card"  method="post" action="index.php?action=add&id=2">
 				<div class="product-image"><img src="images/products/jar/jarM.jpg" alt="Medium O2Jar" title="Medium O2Jar"></div>
 				<div class="product-info">
 					<h4>Medium O2Jar</h4>
+					<input type="hidden" name="hidden-name" value="Medium O2Jar"></input>
 					<h5>$49.99</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
+					<input type="hidden" name="hidden-price" value="49.99"></input>
+					<input type="text" name="quantity" value="1" class="form-control"/>
+					<input type="submit" class="button" name="add-to-cart">Add to Cart</input>
 				</div>
-			</div>
+			</form>
 			<div class="product-card">
 				<div class="product-image"><img src="images/products/jar/jarL.jpg" alt="Large O2Jar" title="Large O2Jar"></div>
 				<div class="product-info">
@@ -97,7 +141,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<!-- BOXES -->
 		<h2 id="boxes">The O2Box - Amazing party essential at an affordable price!</h2>
 		<div class="products">
