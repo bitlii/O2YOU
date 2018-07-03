@@ -120,76 +120,60 @@ if(isset($_POST["add-to-cart"])) {
 		<!-- BOXES -->
 		<h2 id="boxes">The O2Box - Amazing party essential at an affordable price!</h2>
 		<div class="products">
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/box/boxS.jpg" alt="Small O2Box" title="Small O2Box"></div>
+		<?php
+			$query = "SELECT * FROM products WHERE producttype = 'Box' ORDER BY productID ASC";
+			$result = mysqli_query($connect, $query);
+			if(mysqli_num_rows($result) > 0)
+			{
+				while($row = mysqli_fetch_array($result))
+				{
+			?>
+			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
+				<div class="product-image"><img src="images/products/<?php echo $row["productimage"]; ?>"></div>
 				<div class="product-info">
-					<h4>Small O2Box</h4>
-					<h5>$99.99</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
+					<h4><?php echo $row["productname"]; ?></h4>
+					<h5>$ <?php echo $row["productprice"]; ?></h5>
+					<input type="text" name="quantity" value="1"/>
+					<input type="hidden" name="hidden-name" value="<?php echo $row["productname"]; ?>" />
+					<input type="hidden" name="hidden-price" value="<?php echo $row["productprice"]; ?>" />
+					<input type="submit" name="add-to-cart" class="button" value="Add to Cart" />
 				</div>
-			</div>
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/box/boxM.jpg" alt="Medium O2Box" title="Medium O2Box"></div>
-				<div class="product-info">
-					<h4>Medium O2Box</h4>
-					<h5>$199.99</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
-				</div>
-			</div>
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/box/boxL.jpg" alt="Large O2Box" title="Large O2Box"></div>
-				<div class="product-info">
-					<h4>Large O2Box</h4>
-					<h5>$299.99</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
-				</div>
-			</div>
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/box/boxXL.jpg" alt="XL O2Box" title="XL O2Box"></div>
-				<div class="product-info">
-					<h4>Extra Large O2Box</h4>
-					<h5>$449.99</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
-				</div>
-			</div>	
+			</form>
+		<?php
+				}
+			}
+		?>
 		</div>
+		
 		
 		<!-- ACCESSORIES -->
 		<h2 id="accessories">Accessories - Improve your breathing game with these amazing products!</h2>
 		<div class="products">
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/accessories/o2mask.jpg" alt="O2Mask" title="O2Mask"></div>
+		<?php
+			$query = "SELECT * FROM products WHERE producttype = 'Mask' OR producttype = 'Lifestyle' OR producttype = 'Tank'ORDER BY productID ASC";
+			$result = mysqli_query($connect, $query);
+			if(mysqli_num_rows($result) > 0)
+			{
+				while($row = mysqli_fetch_array($result))
+				{
+			?>
+			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
+				<div class="product-image"><img src="images/products/<?php echo $row["productimage"]; ?>"></div>
 				<div class="product-info">
-					<h4>O2Mask</h4>
-					<h5>$49.99</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
+					<h4><?php echo $row["productname"]; ?></h4>
+					<h5>$ <?php echo $row["productprice"]; ?></h5>
+					<input type="text" name="quantity" value="1"/>
+					<input type="hidden" name="hidden-name" value="<?php echo $row["productname"]; ?>" />
+					<input type="hidden" name="hidden-price" value="<?php echo $row["productprice"]; ?>" />
+					<input type="submit" name="add-to-cart" class="button" value="Add to Cart" />
 				</div>
-			</div>
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/accessories/o2techmaskx.jpg" alt="O2Mask X" title="O2Mask X"></div>
-				<div class="product-info">
-					<h4>O2Mask X</h4>
-					<h5>$999.99</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
-				</div>
-			</div>
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/accessories/o2tank.jpg" alt="O2Tank" title="O2Tank"></div>
-				<div class="product-info">
-					<h4>O2Tank</h4>
-					<h5>$149.99</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
-				</div>
-			</div>
-			<div class="product-card">
-				<div class="product-image"><img src="images/products/accessories/o2backpack.jpg" alt="O2Backpack" title="O2Backpack"></div>
-				<div class="product-info">
-					<h4>O2Backpack</h4>
-					<h5>$454.49</h5>
-					<button class="button" name="add-to-cart">Add to Cart</button>
-				</div>
-			</div>
+			</form>
+		<?php
+				}
+			}
+		?>
 		</div>
+		
 	</main>
 </body>
 </html>
