@@ -1,33 +1,38 @@
 <!-- PHP Connection -->
 <?php
 session_start();
-$connect = mysqli_connect("localhost", "root", "", "o2you");
+include "conn.php";
 	
 if(isset($_POST["add-to-cart"])) {
-	if(isset($_SESSION['cart'])) {
-		$itemarrayid = array_column($_SESSION["cart"], "item-id");
-		if(!in_array($_GET["id"], $itemarrayid)) {
-			$count = count($_SESSION["cart"]);
-			$itemarray = array(
-				'item-id'			=>	$_GET["id"],
-				'item-name'			=>	$_POST["hidden-name"],
-				'item-price'		=>	$_POST["hidden-price"],
-				'item-quantity'		=>	$_POST["quantity"]
-			);
-			$_SESSION["cart"][$count] = $itemarray;	
+	if(isset($_SESSION['UserID'])) {
+		if(isset($_SESSION['cart'])) {
+			$itemarrayid = array_column($_SESSION["cart"], "item-id");
+			if(!in_array($_GET["id"], $itemarrayid)) {
+				$count = count($_SESSION["cart"]);
+				$itemarray = array(
+					'item-id'			=>	$_GET["id"],
+					'item-name'			=>	$_POST["hidden-name"],
+					'item-price'		=>	$_POST["hidden-price"],
+					'item-quantity'		=>	$_POST["quantity"]
+				);
+				$_SESSION["cart"][$count] = $itemarray;	
+			}
+			else {
+				echo '<script>alert("Item Already Added")</script>';
+			}
 		}
 		else {
-			echo '<script>alert("Item Already Added")</script>';
+			$itemarray = array(
+				'item-id' 			=> $_GET["id"],
+				'item-name' 		=> $_POST["hidden-name"],
+				'item-price' 		=> $_POST["hidden-price"],
+				'item-quantity' 	=> $_POST["quantity"]
+			);
+			$_SESSION['cart'][0] = $itemarray;
 		}
 	}
 	else {
-		$itemarray = array(
-			'item-id' 			=> $_GET["id"],
-			'item-name' 		=> $_POST["hidden-name"],
-			'item-price' 		=> $_POST["hidden-price"],
-			'item-quantity' 	=> $_POST["quantity"]
-		);
-		$_SESSION['cart'][0] = $itemarray;
+		echo '<script>alert("Please Log in to add to cart.")</script>';
 	}
 }
 ?>
@@ -94,18 +99,16 @@ if(isset($_POST["add-to-cart"])) {
 		<div class="products">
 		<?php
 			$query = "SELECT * FROM products WHERE producttype = 'Jar' ORDER BY productID ASC";
-			$result = mysqli_query($connect, $query);
-			if(mysqli_num_rows($result) > 0)
-			{
-				while($row = mysqli_fetch_array($result))
-				{
+			$result = mysqli_query($conn, $query);
+			if(mysqli_num_rows($result) > 0) {
+				while($row = mysqli_fetch_array($result)) {
 			?>
 			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
 				<div class="product-image"><img src="images/products/<?php echo $row["productimage"]; ?>"></div>
 				<div class="product-info">
 					<h4><?php echo $row["productname"]; ?></h4>
 					<h5>$ <?php echo $row["productprice"]; ?></h5>
-					<input type="number" name="quantity" value="1"/>
+					<input type="number" name="quantity" class="product-quantity" min="0" value="1"/>
 					<input type="hidden" name="hidden-name" value="<?php echo $row["productname"]; ?>" />
 					<input type="hidden" name="hidden-price" value="<?php echo $row["productprice"]; ?>" />
 					<input type="submit" name="add-to-cart" class="button" value="Add to Cart" />
@@ -122,18 +125,16 @@ if(isset($_POST["add-to-cart"])) {
 		<div class="products">
 		<?php
 			$query = "SELECT * FROM products WHERE producttype = 'Box' ORDER BY productID ASC";
-			$result = mysqli_query($connect, $query);
-			if(mysqli_num_rows($result) > 0)
-			{
-				while($row = mysqli_fetch_array($result))
-				{
+			$result = mysqli_query($conn, $query);
+			if(mysqli_num_rows($result) > 0) {
+				while($row = mysqli_fetch_array($result)) {
 			?>
 			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
 				<div class="product-image"><img src="images/products/<?php echo $row["productimage"]; ?>"></div>
 				<div class="product-info">
 					<h4><?php echo $row["productname"]; ?></h4>
 					<h5>$ <?php echo $row["productprice"]; ?></h5>
-					<input type="number" name="quantity" value="1"/>
+					<input type="number" name="quantity" class="product-quantity" min="0" value="1"/>
 					<input type="hidden" name="hidden-name" value="<?php echo $row["productname"]; ?>" />
 					<input type="hidden" name="hidden-price" value="<?php echo $row["productprice"]; ?>" />
 					<input type="submit" name="add-to-cart" class="button" value="Add to Cart" />
@@ -151,18 +152,16 @@ if(isset($_POST["add-to-cart"])) {
 		<div class="products">
 		<?php
 			$query = "SELECT * FROM products WHERE producttype = 'Mask' OR producttype = 'Lifestyle' OR producttype = 'Tank'ORDER BY productID ASC";
-			$result = mysqli_query($connect, $query);
-			if(mysqli_num_rows($result) > 0)
-			{
-				while($row = mysqli_fetch_array($result))
-				{
+			$result = mysqli_query($conn, $query);
+			if(mysqli_num_rows($result) > 0) {
+				while($row = mysqli_fetch_array($result)) {
 			?>
 			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
 				<div class="product-image"><img src="images/products/<?php echo $row["productimage"]; ?>"></div>
 				<div class="product-info">
 					<h4><?php echo $row["productname"]; ?></h4>
 					<h5>$ <?php echo $row["productprice"]; ?></h5>
-					<input type="number" name="quantity" value="1"/>
+					<input type="number" name="quantity" class="product-quantity" min="0" value="1"/>
 					<input type="hidden" name="hidden-name" value="<?php echo $row["productname"]; ?>" />
 					<input type="hidden" name="hidden-price" value="<?php echo $row["productprice"]; ?>" />
 					<input type="submit" name="add-to-cart" class="button" value="Add to Cart" />

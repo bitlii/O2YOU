@@ -90,6 +90,11 @@ nav ul li a {
 	margin: 10px 0 5px 10px;
 }
 
+.product-quantity {
+	text-align: center;
+	width: 10%;
+}
+
 /* ------ REGISTRATION & LOGIN ------ */
 .registration-container, .login-container, .profile-container {
 	background-color: #4268f4;
