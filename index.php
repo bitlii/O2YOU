@@ -2,35 +2,49 @@
 <?php
 session_start();
 include "conn.php";
-	
+// Checks if the "add-to-cart" POST from the form was pressed.	
 if(isset($_POST["add-to-cart"])) {
+	// Checks if there is an existing userid session present (is the user logged in). 
 	if(isset($_SESSION['UserID'])) {
+		// Checks if there is an existing cart session present with items in it, if not it'll create a new cart session for the user.
 		if(isset($_SESSION['cart'])) {
+			// Grabs all of the item id's from the item-id column from the cart.
 			$itemarrayid = array_column($_SESSION["cart"], "item-id");
+			// Checks if the newly added item's id is in itemarrayid (and therefore in the cart).
 			if(!in_array($_GET["id"], $itemarrayid)) {
+				// If it's not in the cart already, it will now count the number of items thats already in the cart.
 				$count = count($_SESSION["cart"]);
+				// Assigns the item details from the form to the keys of the array as the values.
 				$itemarray = array(
 					'item-id'			=>	$_GET["id"],
 					'item-name'			=>	$_POST["hidden-name"],
 					'item-price'		=>	$_POST["hidden-price"],
 					'item-quantity'		=>	$_POST["quantity"]
 				);
+				// because arrays start at 0 (and not 1), using $count and assigning the new item to the count will actually add it to the end of the cart.
+				// eg: there are 2 items in the cart, thus $count=2,
+				//   : since arrays start at 0 (item 1=0, item 2=1), assigns the 3rd item at 2, will assign the item to an empty slot. 
 				$_SESSION["cart"][$count] = $itemarray;	
 			}
+			// Item is already present in the cart.
 			else {
 				echo '<script>alert("Item Already Added")</script>';
 			}
 		}
+		// A cart session with items currently do not exist.
 		else {
+			// Defines the array and its keys; the item details will be assigned to each of these keys.
 			$itemarray = array(
 				'item-id' 			=> $_GET["id"],
 				'item-name' 		=> $_POST["hidden-name"],
 				'item-price' 		=> $_POST["hidden-price"],
 				'item-quantity' 	=> $_POST["quantity"]
 			);
+			// Adds the array to the start of the cart.
 			$_SESSION['cart'][0] = $itemarray;
 		}
 	}
+	// The user is not logged in. Warns the guest.
 	else {
 		echo '<script>alert("Please Log in to add to cart.")</script>';
 	}
