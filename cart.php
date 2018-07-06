@@ -48,7 +48,7 @@ if(isset($_GET["action"]))
 		<ul id="nav-right">
 			<li><a href="updateprofile.php">PROFILE</a></li>
 			<li><a href="logout.php">LOGOUT</a></li>
-			<li class="cart"><a href="cart.php">CART</a></li>
+			<li><a href="cart.php">CART</a></li>
 		</ul>
 	<?php
 	}
@@ -57,7 +57,6 @@ if(isset($_GET["action"]))
 		<ul id="nav-right">
 			<li><a href="registration.php">REGISTER</a></li>
 			<li><a href="login.php">LOGIN</a></li>
-			<li class="cart"><a href="cart.php">CART</a></li>
 		</ul>
 		<?php
 	}
