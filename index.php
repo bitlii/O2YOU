@@ -10,7 +10,7 @@ if(isset($_POST["add-to-cart"])) {
 		if(isset($_SESSION['cart'])) {
 			// Grabs all of the item id's from the item-id column from the cart.
 			$itemarrayid = array_column($_SESSION["cart"], "item-id");
-			// Checks if the newly added item's id is in itemarrayid (and therefore in the cart).
+			// Checks if the newly added item's id (which is grabbed from the form) is in itemarrayid (and therefore in the cart).
 			if(!in_array($_GET["id"], $itemarrayid)) {
 				// If it's not in the cart already, it will now count the number of items thats already in the cart.
 				$count = count($_SESSION["cart"]);
@@ -78,8 +78,11 @@ if(isset($_POST["add-to-cart"])) {
 			<li><a href="index.php#accessories">ACCESSORIES</a></li>
 		</ul>
 	<?php
+	// Checks if there is a user session/ checks if the user is logged in.
+	// If the user is logged in, show this nav bar.
 	if (isset($_SESSION["UserID"])){
 		?>
+		<!-- Logged in right-side navigation bar -->
 		<ul id="nav-right">
 			<li><a href="updateprofile.php">PROFILE</a></li>
 			<li><a href="logout.php">LOGOUT</a></li>
@@ -87,8 +90,10 @@ if(isset($_POST["add-to-cart"])) {
 		</ul>
 	<?php
 	}
+	// If the user is not logged in, show this nav bar.
 	else {
 		?>
+		<!-- Not logged in right-side navigation bar -->
 		<ul id="nav-right">
 			<li><a href="registration.php">REGISTER</a></li>
 			<li><a href="login.php">LOGIN</a></li>
@@ -111,12 +116,18 @@ if(isset($_POST["add-to-cart"])) {
 		<h2 id="jars">The classic O2Jars - Fun for the whole family.</h2>
 		<div class="products">
 		<?php
+			// SQL query is made to select all products where the type of it is a "jar", then order by the id ascending.
 			$query = "SELECT * FROM products WHERE producttype = 'Jar' ORDER BY productID ASC";
 			$result = mysqli_query($conn, $query);
+			// Checks if the query returned any products back.
 			if(mysqli_num_rows($result) > 0) {
+				// Loop through every single products and its details.
 				while($row = mysqli_fetch_array($result)) {
 			?>
+			<!-- The Product Card -->
+			<!-- When the form has been submitted, the php will use the productID given in the action attribute to be used in the item adding code. -->
 			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
+				<!-- echos/displays all of the details of the product row -->
 				<div class="product-image"><img src="images/products/<?php echo $row["productimage"]; ?>"></div>
 				<div class="product-info">
 					<h4><?php echo $row["productname"]; ?></h4>
