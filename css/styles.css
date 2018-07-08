@@ -10,8 +10,11 @@
 /* HEADER */
 header {
 	color: white;
+	width: 100%;
 	font-size: 1.5em;
 	background-color: #4268f4;
+	display: flex;
+	justify-content: space-between;
 }
 
 header h1 {
@@ -20,6 +23,10 @@ header h1 {
 
 #slogan {
 	font-size: 50%;
+}
+
+#welcome {
+	align-self: flex-end;
 }
 
 /* NAVIGATION */

@@ -67,6 +67,9 @@ if(isset($_POST["add-to-cart"])) {
 	<!-- Header Area -->
 	<header>
 		<h1>O<sub>2</sub>YOU <span id="slogan">The only oxygen you will ever need</span></h1>
+		<?php if(isset($_SESSION['UserID'])) { ?>
+		<h4 id="welcome">Welcome home, <?php echo $_SESSION["FirstName"];?></h4>
+		<?php } ?>
 	</header>
 
 	<!-- Navigation Bar -->
@@ -86,7 +89,7 @@ if(isset($_POST["add-to-cart"])) {
 		<ul id="nav-right">
 			<li><a href="updateprofile.php">PROFILE</a></li>
 			<li><a href="logout.php">LOGOUT</a></li>
-			<a href="cart.php">CART</a></li>
+			<li><a href="cart.php">CART</a></li>
 		</ul>
 	<?php
 	}

@@ -1,8 +1,7 @@
 <?php
 session_start();
 include"conn.php";
-?>
-<?php
+
 // When the login button is pressed -> grabs inputted info, assigns it to a variable & checks with table rows if it's in database.
 if (isset($_POST['log-in'])) {
 	$loginemail = $_POST['email'];
@@ -15,6 +14,7 @@ if (isset($_POST['log-in'])) {
 	$id = $row['userID'];
 	
 	$_SESSION['UserID'] = $row['userID'];
+	$_SESSION['FirstName'] = $row['firstname'];
 }
 ?>
 <html lang="en">
