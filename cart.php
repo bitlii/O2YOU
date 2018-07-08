@@ -66,11 +66,11 @@ if(isset($_GET["action"]))
 		<table>
 			<tr>
 				<th width="10%"></th>
-				<th width="40%">Item Name</th>
-				<th width="10%">Quantity</th>
-				<th width="20%">Price</th>
-				<th width="15%">Total</th>
-				<th width="5%">Action</th>
+				<th width="40%" align="left">Item Name</th>
+				<th width="10%" align="right">Quantity</th>
+				<th width="20%" align="right">Price</th>
+				<th width="15%" align="right">Total</th>
+				<th width="5%" align="right">Action</th>
 			</tr>
 			<?php
 			if(!empty($_SESSION["cart"]))
