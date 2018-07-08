@@ -63,14 +63,14 @@ if(isset($_GET["action"]))
 	?>
 	</nav>
 	<div>
-		<table>
-			<tr>
-				<th width="10%"></th>
-				<th width="40%" align="left">Item Name</th>
-				<th width="10%" align="right">Quantity</th>
-				<th width="20%" align="right">Price</th>
-				<th width="15%" align="right">Total</th>
-				<th width="5%" align="right">Action</th>
+		<table class="cart-table">
+			<tr class="cart-rows">
+				<th width="5%"></th>
+				<th width="20%" align="left">Item Name</th>
+				<th width="10%">Quantity</th>
+				<th width="10%">Price</th>
+				<th width="10%">Total</th>
+				<th width="5%">Action</th>
 			</tr>
 			<?php
 			if(!empty($_SESSION["cart"]))
@@ -79,9 +79,9 @@ if(isset($_GET["action"]))
 				foreach($_SESSION["cart"] as $keys => $values)
 				{
 			?>
-			<tr>
+			<tr class="cart-rows">
 				<td class="product-image"><img src="images/products/<?php echo $values["item-image"]; ?>"></td>
-				<td><?php echo $values["item-name"]; ?></td>
+				<td align="left"><?php echo $values["item-name"]; ?></td>
 				<td><?php echo $values["item-quantity"]; ?></td>
 				<td>$ <?php echo $values["item-price"]; ?></td>
 				<td>$ <?php echo number_format($values["item-quantity"] * $values["item-price"], 2);?></td>
