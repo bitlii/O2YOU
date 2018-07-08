@@ -17,6 +17,7 @@ if(isset($_POST["add-to-cart"])) {
 				// Assigns the item details from the form to the keys of the array as the values.
 				$itemarray = array(
 					'item-id'			=>	$_GET["id"],
+					'item-image'		=>  $_POST["image"],
 					'item-name'			=>	$_POST["hidden-name"],
 					'item-price'		=>	$_POST["hidden-price"],
 					'item-quantity'		=>	$_POST["quantity"]
@@ -36,6 +37,7 @@ if(isset($_POST["add-to-cart"])) {
 			// Defines the array and its keys; the item details will be assigned to each of these keys.
 			$itemarray = array(
 				'item-id' 			=> $_GET["id"],
+				'item-image'		=> $_POST["image"],
 				'item-name' 		=> $_POST["hidden-name"],
 				'item-price' 		=> $_POST["hidden-price"],
 				'item-quantity' 	=> $_POST["quantity"]
@@ -131,7 +133,9 @@ if(isset($_POST["add-to-cart"])) {
 			<!-- When the form has been submitted, the php will use the productID given in the action attribute to be used in the item adding code. -->
 			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
 				<!-- echos/displays all of the details of the product row -->
-				<div class="product-image"><img src="images/products/<?php echo $row["productimage"]; ?>"></div>
+				<div class="product-image">
+					<input type="hidden" name="image" value="<?php echo $row["productimage"]; ?>"><img src="images/products/<?php echo $row["productimage"]; ?>"></input>
+				</div>
 				<div class="product-info">
 					<h4><?php echo $row["productname"]; ?></h4>
 					<h5>$ <?php echo $row["productprice"]; ?></h5>
