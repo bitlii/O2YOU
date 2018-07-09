@@ -163,7 +163,9 @@ if(isset($_POST["add-to-cart"])) {
 				while($row = mysqli_fetch_array($result)) {
 			?>
 			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
-				<div class="product-image"><img src="images/products/<?php echo $row["productimage"]; ?>"></div>
+				<div class="product-image">
+					<input type="hidden" name="image" value="<?php echo $row["productimage"]; ?>"><img src="images/products/<?php echo $row["productimage"]; ?>"></input>
+				</div>
 				<div class="product-info">
 					<h4><?php echo $row["productname"]; ?></h4>
 					<h5>$ <?php echo $row["productprice"]; ?></h5>
@@ -192,7 +194,9 @@ if(isset($_POST["add-to-cart"])) {
 				while($row = mysqli_fetch_array($result)) {
 			?>
 			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
-				<div class="product-image"><img src="images/products/<?php echo $row["productimage"]; ?>"></div>
+				<div class="product-image">
+					<input type="hidden" name="image" value="<?php echo $row["productimage"]; ?>"><img src="images/products/<?php echo $row["productimage"]; ?>"></input>
+				</div>
 				<div class="product-info">
 					<h4><?php echo $row["productname"]; ?></h4>
 					<h5>$ <?php echo $row["productprice"]; ?></h5>

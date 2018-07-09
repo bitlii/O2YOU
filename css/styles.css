@@ -27,6 +27,7 @@ header h1 {
 
 #welcome {
 	align-self: flex-end;
+	padding-right: 0.5em;
 }
 
 /* NAVIGATION */
@@ -116,7 +117,7 @@ nav ul li a {
 /* ------ CART ------ */
 .cart-table {
 	padding: 2%;
-	margin: 5px;
+	margin: 0.5em;
 	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
