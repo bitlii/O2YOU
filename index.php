@@ -68,7 +68,7 @@ if(isset($_POST["add-to-cart"])) {
 <body>
 	<!-- Header Area -->
 	<header>
-		<h1>O<sub>2</sub>YOU <span id="slogan">The only oxygen you will ever need</span></h1>
+		<img id="logo" src="images/banners/logo.png" alt="O2YOU">
 		<?php if(isset($_SESSION['UserID'])) { ?>
 		<h4 id="welcome">Welcome home, <?php echo $_SESSION["FirstName"];?></h4>
 		<?php } ?>

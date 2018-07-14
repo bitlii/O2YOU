@@ -31,7 +31,7 @@ if(isset($_GET["action"]))
 <body>
 	<!-- Header Area -->
 	<header>
-		<h1>O<sub>2</sub>YOU <span id="slogan">The only oxygen you will ever need</span></h1>
+		<img id="logo" src="images/banners/logo.png" alt="O2YOU">
 	</header>
 
 	<!-- Navigation Bar -->

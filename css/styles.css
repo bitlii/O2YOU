@@ -17,12 +17,9 @@ header {
 	justify-content: space-between;
 }
 
-header h1 {
-	padding-left: 0.5em;
-}
-
-#slogan {
-	font-size: 50%;
+#logo {
+	max-width: 30%;
+	height: 10%;
 }
 
 #welcome {
