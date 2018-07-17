@@ -58,6 +58,7 @@ if(isset($_POST["add-to-cart"])) {
 	<title>O2YOU - The number one marketplace for your oxygen needs</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="shortcut icon" href="images/banners/favicon.png">
 
 	<!-- Meta Data -->
 	<meta charset="utf-8"/>

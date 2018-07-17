@@ -25,6 +25,7 @@ include "conn.php";
 	<title>O2YOU - Registration</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="shortcut icon" href="images/banners/favicon.png">
 	
 </head>
 <body class="profile-container">

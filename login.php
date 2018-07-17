@@ -22,6 +22,7 @@ if (isset($_POST['log-in'])) {
 	<title>O2YOU - Login</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="shortcut icon" href="images/banners/favicon.png">
 	
 </head>
 <body class="login-container">

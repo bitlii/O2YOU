@@ -19,6 +19,7 @@ if (isset($_POST['sign-up'])) {
 	<title>O2YOU - Registration</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="shortcut icon" href="images/banners/favicon.png">
 	
 </head>
 <body class="registration-container">

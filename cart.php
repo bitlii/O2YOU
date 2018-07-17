@@ -24,6 +24,7 @@ if(isset($_GET["action"]))
 	<title>O2YOU - Cart</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="shortcut icon" href="images/banners/favicon.png">
 
 	<!-- Meta Data -->
 	<meta charset="utf-8"/>
