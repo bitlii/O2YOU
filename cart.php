@@ -2,6 +2,7 @@
 session_start();
 include"conn.php";
 
+
 if(isset($_GET["action"]))
 {
 	if($_GET["action"] == "delete")
@@ -63,7 +64,7 @@ if(isset($_GET["action"]))
 	}
 	?>
 	</nav>
-	<div>
+	<div class="cart-container">
 		<table class="cart-table">
 			<tr class="cart-rows">
 				<th width="5%"></th>
@@ -86,16 +87,15 @@ if(isset($_GET["action"]))
 				<td><?php echo $values["item-quantity"]; ?></td>
 				<td>$ <?php echo $values["item-price"]; ?></td>
 				<td>$ <?php echo number_format($values["item-quantity"] * $values["item-price"], 2);?></td>
-				<td><a href="cart.php?action=delete&id=<?php echo $values["item-id"]; ?>"><span class="text-danger">Remove</span></a></td>
+				<td><a href="cart.php?action=delete&id=<?php echo $values["item-id"]; ?>"><span>Remove</span></a></td>
 			</tr>
 			<?php
 					$total = $total + ($values["item-quantity"] * $values["item-price"]);
 				}
 			?>
 			<tr>
-				<td colspan="3" align="right">Total</td>
+				<td colspan="5" align="right">Total</td>
 				<td align="right">$ <?php echo number_format($total, 2); ?></td>
-				<td></td>
 			</tr>
 			<?php
 			}

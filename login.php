@@ -29,6 +29,7 @@ if (isset($_POST['log-in'])) {
 	<!-- Main Login Container -->
 	<h1 class="title"><a href="index.php">O2YOU</a></h1>
 	<div class="form-container">
+		<!-- Login Form -->
 		<form id="login" name="login-form" method="post" action="">
 			<h1 class="form-title">Login</h1>
 			<div class="form-element"><input name="email" type="email" required="required" class="text-field" placeholder="Email"></div>
@@ -40,6 +41,7 @@ if (isset($_POST['log-in'])) {
 				?>
 					<script>window.location = "index.php?id=<?php echo $id;?>";</script>
 				<?php
+				// If it does not match ie: wrong email/password, tell them that it's invalid.
 				} else {
 					echo "Invalid Login!";
 				}

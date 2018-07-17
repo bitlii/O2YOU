@@ -10,9 +10,11 @@ include "conn.php";
 	else {
 		header('Location: login.php');
 	}
-
+	
 	$user = $_SESSION["UserID"];
 	$result = $conn->query("select * from users where userID='$user'");
+	// Gets the user's row and its info, and assigns each value to a session variable.
+	// Session variable is then displayed in the input box as values which can then be updated.
 	$row = $result->fetch_array();
 	$_SESSION["firstname"] = $row['firstname'];
 	$_SESSION["lastname"] = $row['lastname'];
@@ -30,6 +32,7 @@ include "conn.php";
 </head>
 <body class="profile-container">
 	<h1 class="title"><a href="index.php">O2YOU</a></h1>
+	<!-- Update Profile Form -->
 	<div class="form-container">
 		<form id="update-profile" name="update-form" method="post" action="">
 			<h1 class="form-title">Update Profile</h1>
@@ -41,14 +44,18 @@ include "conn.php";
 			<p class="error"><?php
 				// If the update profile button is pressed.
 				if (isset($_POST['update-profile'])) {
+					
+					// Assigns whatever was in the input boxes regardless if they updated or not to a variable.
 					$id = $row['userID'];
 					$updatefirstname = $_POST['first-name'];
 					$updatelastname = $_POST['last-name'];
 					$updateemail = $_POST['email'];
 					$updatepassword = $_POST['password'];
 					$updateaddress = $_POST['address'];
-			
+					
+					// Variables are then inserted into the database row for the user.
 					$data = $conn->query("UPDATE users SET firstname = '$updatefirstname', lastname = '$updatelastname', email = '$updateemail', password = '$updatepassword', address = '$updateaddress' where userID = $user");
+					// Checks if the data is true. If it isn't, there is a problem with the query.
 					if ($data) { ?>
 					<p class="success"><?php
 						echo "Profile details were successfully updated!"; ?>

@@ -112,9 +112,15 @@ nav ul li a {
 }
 
 /* ------ CART ------ */
+.cart-container {
+	display: flex;
+	justify-content: center;
+}
+
+
 .cart-table {
 	padding: 2%;
-	margin: 0.5em;
+	margin: 4px;
 	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
