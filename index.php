@@ -25,7 +25,8 @@ if(isset($_POST["add-to-cart"])) {
 				// because arrays start at 0 (and not 1), using $count and assigning the new item to the count will actually add it to the end of the cart.
 				// eg: there are 2 items in the cart, thus $count=2,
 				//   : since arrays start at 0 (item 1=0, item 2=1), assigns the 3rd item at 2, will assign the item to an empty slot. 
-				$_SESSION["cart"][$count] = $itemarray;	
+				$_SESSION["cart"][$count] = $itemarray;
+				echo '<script>alert("Item added to cart!")</script>';				
 			}
 			// Item is already present in the cart.
 			else {
