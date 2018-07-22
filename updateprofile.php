@@ -31,7 +31,7 @@ include "conn.php";
 	
 </head>
 <body class="profile-container">
-	<h1 class="title"><a href="index.php">O2YOU</a></h1>
+	<a href="index.php"><img id="logo" src="images/banners/logo.png" alt="O2YOU"></a>
 	<!-- Update Profile Form -->
 	<div class="form-container">
 		<form id="update-profile" name="update-form" method="post" action="">

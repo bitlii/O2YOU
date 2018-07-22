@@ -27,7 +27,7 @@ if (isset($_POST['log-in'])) {
 </head>
 <body class="login-container">
 	<!-- Main Login Container -->
-	<h1 class="title"><a href="index.php">O2YOU</a></h1>
+	<a href="index.php"><img id="logo" src="images/banners/logo.png" alt="O2YOU"></a>
 	<div class="form-container">
 		<!-- Login Form -->
 		<form id="login" name="login-form" method="post" action="">

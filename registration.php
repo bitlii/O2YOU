@@ -24,7 +24,7 @@ if (isset($_POST['sign-up'])) {
 </head>
 <body class="registration-container">
 	<!-- Main Registration Container -->
-	<h1 class="title"><a href="index.php">O2YOU</a></h1>
+	<a href="index.php"><img id="logo" src="images/banners/logo.png" alt="O2YOU"></a>
 	<div class="form-container">
 		<form id="registration"	name="registration-form" method="post" action="" enctype="multipart/formdata">
 			<h1 class="form-title">Registration</h1>
