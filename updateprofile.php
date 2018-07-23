@@ -59,7 +59,9 @@ include "conn.php";
 					if ($data) { ?>
 					<p class="success"><?php
 						echo "Profile details were successfully updated!"; ?>
-					</p><?php
+					</p>
+					<script>window.location = "updateprofile.php";</script>
+					<?php
 					}
 					else {
 						echo "Profile details did not successfully update!";
