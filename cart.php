@@ -2,6 +2,12 @@
 session_start();
 include"conn.php";
 
+// If the session user matches the user's session id -> show their user details.
+	if (isset($_SESSION["UserID"])) {
+	}
+	else {
+		header('Location: login.php');
+	}
 
 if(isset($_GET["action"]))
 {
