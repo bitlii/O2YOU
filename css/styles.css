@@ -133,12 +133,19 @@ nav ul li a {
 	padding-right: 1.5em;
 }
 
-.remove {
+.cart-buttons {
 	text-decoration: none;
     color: white;
-	background-color: #4268f4;
 	padding: 0.5em 1em 0.5em 1em;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.remove, .checkout {
+	background-color: red;
+}
+
+.checkout {
+	background-color: #4CAF50;
 }
 
 /* ------ REGISTRATION & LOGIN ------ */

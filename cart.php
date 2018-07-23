@@ -87,15 +87,16 @@ if(isset($_GET["action"]))
 				<td><?php echo $values["item-quantity"]; ?></td>
 				<td>$ <?php echo $values["item-price"]; ?></td>
 				<td>$ <?php echo number_format($values["item-quantity"] * $values["item-price"], 2);?></td>
-				<td><a class="remove" href="cart.php?action=delete&id=<?php echo $values["item-id"]; ?>">Remove</a></td>
+				<td><a class="remove cart-buttons" href="cart.php?action=delete&id=<?php echo $values["item-id"]; ?>">Remove</a></td>
 			</tr>
 			<?php
 					$total = $total + ($values["item-quantity"] * $values["item-price"]);
 				}
 			?>
-			<tr>
+			<tr class="cart-rows">
 				<td colspan="4" align="right">Total</td>
 				<td align="right">$ <?php echo number_format($total, 2); ?></td>
+				<td><a class="checkout cart-buttons" href="">Checkout</a></td>
 			</tr>
 			<?php
 			}
