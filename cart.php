@@ -69,10 +69,10 @@ if(isset($_GET["action"]))
 			<tr class="cart-rows">
 				<th width="5%"></th>
 				<th width="20%" align="left">Item Name</th>
-				<th width="10%">Quantity</th>
-				<th width="10%">Price</th>
-				<th width="10%">Total</th>
-				<th width="5%">Action</th>
+				<th width="5%">Quantity</th>
+				<th width="5%">Price</th>
+				<th width="5%">Total</th>
+				<th width="5%" id="action-header">Action</th>
 			</tr>
 			<?php
 			if(!empty($_SESSION["cart"]))
@@ -87,14 +87,14 @@ if(isset($_GET["action"]))
 				<td><?php echo $values["item-quantity"]; ?></td>
 				<td>$ <?php echo $values["item-price"]; ?></td>
 				<td>$ <?php echo number_format($values["item-quantity"] * $values["item-price"], 2);?></td>
-				<td><a href="cart.php?action=delete&id=<?php echo $values["item-id"]; ?>"><span>Remove</span></a></td>
+				<td><a class="remove" href="cart.php?action=delete&id=<?php echo $values["item-id"]; ?>">Remove</a></td>
 			</tr>
 			<?php
 					$total = $total + ($values["item-quantity"] * $values["item-price"]);
 				}
 			?>
 			<tr>
-				<td colspan="5" align="right">Total</td>
+				<td colspan="4" align="right">Total</td>
 				<td align="right">$ <?php echo number_format($total, 2); ?></td>
 			</tr>
 			<?php
