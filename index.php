@@ -142,7 +142,7 @@ if(isset($_POST["add-to-cart"])) {
 					<h4><?php echo $row["productname"]; ?></h4>
 					<h5>$ <?php echo $row["productprice"]; ?></h5>
 					<div class="product-card-bottom">
-						<input type="number" name="quantity" class="product-quantity" min="1" value="1"/>
+						<input type="number" name="quantity" class="product-quantity" min="1" max="100" value="1"/>
 						<input type="hidden" name="hidden-name" value="<?php echo $row["productname"]; ?>" />
 						<input type="hidden" name="hidden-price" value="<?php echo $row["productprice"]; ?>" />
 						<input type="submit" name="add-to-cart" class="button" value="Add to Cart" />
@@ -172,7 +172,7 @@ if(isset($_POST["add-to-cart"])) {
 					<h4><?php echo $row["productname"]; ?></h4>
 					<h5>$ <?php echo $row["productprice"]; ?></h5>
 					<div class="product-card-bottom">
-						<input type="number" name="quantity" class="product-quantity" min="1" value="1"/>
+						<input type="number" name="quantity" class="product-quantity" min="1" max="100" value="1"/>
 						<input type="hidden" name="hidden-name" value="<?php echo $row["productname"]; ?>" />
 						<input type="hidden" name="hidden-price" value="<?php echo $row["productprice"]; ?>" />
 						<input type="submit" name="add-to-cart" class="button" value="Add to Cart" />
@@ -203,7 +203,7 @@ if(isset($_POST["add-to-cart"])) {
 					<h4><?php echo $row["productname"]; ?></h4>
 					<h5>$ <?php echo $row["productprice"]; ?></h5>
 					<div class="product-card-bottom">
-						<input type="number" name="quantity" class="product-quantity" min="1" value="1"/>
+						<input type="number" name="quantity" class="product-quantity" min="1" max="100" value="1"/>
 						<input type="hidden" name="hidden-name" value="<?php echo $row["productname"]; ?>" />
 						<input type="hidden" name="hidden-price" value="<?php echo $row["productprice"]; ?>" />
 						<input type="submit" name="add-to-cart" class="button" value="Add to Cart" />
