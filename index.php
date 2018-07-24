@@ -122,6 +122,7 @@ if(isset($_POST["add-to-cart"])) {
 		<!-- JARS -->
 		<h2 id="jars">The classic O2Jars - Fun for the whole family.</h2>
 		<div class="products">
+		<!-- Product List Query -->
 		<?php
 			// SQL query is made to select all products where the type of it is a "jar", then order by the id ascending.
 			$query = "SELECT * FROM products WHERE producttype = 'Jar' ORDER BY productID ASC";
@@ -158,12 +159,14 @@ if(isset($_POST["add-to-cart"])) {
 		<!-- BOXES -->
 		<h2 id="boxes">The O2Box - Amazing party essential at an affordable price!</h2>
 		<div class="products">
+		<!-- Product List Query -->
 		<?php
 			$query = "SELECT * FROM products WHERE producttype = 'Box' ORDER BY productID ASC";
 			$result = mysqli_query($conn, $query);
 			if(mysqli_num_rows($result) > 0) {
 				while($row = mysqli_fetch_array($result)) {
 			?>
+			<!-- The Product Card -->
 			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
 				<div class="product-image">
 					<input type="hidden" name="image" value="<?php echo $row["productimage"]; ?>"><img src="images/products/<?php echo $row["productimage"]; ?>"></input>
@@ -189,12 +192,14 @@ if(isset($_POST["add-to-cart"])) {
 		<!-- ACCESSORIES -->
 		<h2 id="accessories">Accessories - Improve your breathing game with these amazing products!</h2>
 		<div class="products">
+		<!-- Product List Query -->
 		<?php
 			$query = "SELECT * FROM products WHERE producttype = 'Mask' OR producttype = 'Lifestyle' OR producttype = 'Tank'ORDER BY productID ASC";
 			$result = mysqli_query($conn, $query);
 			if(mysqli_num_rows($result) > 0) {
 				while($row = mysqli_fetch_array($result)) {
 			?>
+			<!-- The Product Card -->
 			<form class="product-card" method="post" action="index.php?action=add&id=<?php echo $row["productID"]; ?>">
 				<div class="product-image">
 					<input type="hidden" name="image" value="<?php echo $row["productimage"]; ?>"><img src="images/products/<?php echo $row["productimage"]; ?>"></input>

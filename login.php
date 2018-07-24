@@ -4,8 +4,10 @@ include"conn.php";
 
 // When the login button is pressed -> grabs inputted info, assigns it to a variable & checks with table rows if it's in database.
 if (isset($_POST['log-in'])) {
+	// Assigns the inputted info to a variable
 	$loginemail = $_POST['email'];
 	$loginpassword = $_POST['password'];
+	// Query to check if the email and password are present in the database table.
 	$result = $conn->query("select * from users where email='$loginemail' and password='$loginpassword'");
 	$row = $result->fetch_array();
 	
