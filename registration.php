@@ -14,6 +14,7 @@ if (isset($_POST['sign-up'])) {
 	$confirmpassword = $_POST['confirm-password'];
 }
 ?>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 	<title>O2YOU - Registration</title>
@@ -27,7 +28,7 @@ if (isset($_POST['sign-up'])) {
 	<a href="index.php"><img id="logo" src="images/banners/logo.png" alt="O2YOU"></a>
 	<!-- Registration Form Container -->
 	<div class="form-container">
-		<form id="registration"	name="registration-form" method="post" action="" enctype="multipart/formdata">
+		<form id="registration"	name="registration-form" method="post" action="" enctype="multipart/form-data">
 			<h1 class="form-title">Registration</h1>
 			<div class="form-element"><input name="first-name" type="text" required="required" class="text-field" placeholder="First Name"></div>
 			<div class="form-element"><input name="last-name" type="text" required="required" class="text-field" placeholder="Last Name"></div>
@@ -36,7 +37,7 @@ if (isset($_POST['sign-up'])) {
 			<div class="form-element"><input name="password" type="password" required="required" class="text-field" placeholder="Password"></div>
 			<div class="form-element"><input name="confirm-password" type="password" required="required" class="text-field" placeholder="Confirm Password"></div>
 			<p class="error"><?php
-				// If the sign up button is pressed -> insert all the info into the db on a new row when password and confirm password match.
+				// If the sign up button is pressed then insert all the info into the db on a new row when password and confirm password match.
 				if (isset($_POST['sign-up'])) {
 					if ($password === $confirmpassword) {
 						$sql = $conn->query("INSERT INTO users (firstname, lastname, email, password, address) Values('$fname','$lname', '$email', '$password', '$address')");

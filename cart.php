@@ -27,7 +27,7 @@ if(isset($_GET["action"]))
 	}
 }
 ?>
-
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 	<title>O2YOU - Cart</title>
@@ -78,7 +78,7 @@ if(isset($_GET["action"]))
 		<table class="cart-table">
 			<!-- Row 1 - Cart Headers -->
 			<tr class="cart-rows">
-				<th width="5%"></th>
+				<th width="5%"></th> <!-- Image Column -->
 				<th width="20%" align="left">Item Name</th>
 				<th width="5%">Quantity</th>
 				<th width="5%">Price</th>

@@ -19,6 +19,7 @@ if (isset($_POST['log-in'])) {
 	$_SESSION['FirstName'] = $row['firstname'];
 }
 ?>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 	<title>O2YOU - Login</title>

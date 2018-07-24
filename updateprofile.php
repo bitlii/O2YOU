@@ -22,6 +22,7 @@ include "conn.php";
 	$_SESSION["password"] = $row['password'];
 	$_SESSION["address"] = $row['address'];
 ?>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 	<title>O2YOU - Registration</title>
