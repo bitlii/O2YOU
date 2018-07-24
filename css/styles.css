@@ -18,13 +18,19 @@ header {
 }
 
 #logo {
-	max-width: 30%;
-	height: 10%;
+	width: 20%;
+	height: 1%;
 }
 
 #welcome {
 	align-self: flex-end;
 	padding-right: 0.5em;
+}
+
+@media all and (max-width: 480px) {
+	#welcome {
+		display: none;
+	}
 }
 
 /* NAVIGATION */
@@ -35,6 +41,11 @@ nav {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#nav-left, #nav-right {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 nav ul {
