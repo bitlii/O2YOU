@@ -35,8 +35,8 @@ if (isset($_POST['log-in'])) {
 		<!-- Login Form -->
 		<form id="login" name="login-form" method="post" action="">
 			<h1 class="form-title">Login</h1>
-			<div class="form-element"><input name="email" type="email" required="required" class="text-field" placeholder="Email"></div>
-			<div class="form-element"><input name="password" type="password" required="required" class="text-field" placeholder="Password"></div>
+			<div class="form-element"><input name="email" type="email" required="required" class="text-field" maxlength="255" placeholder="Email"></div>
+			<div class="form-element"><input name="password" type="password" required="required" class="text-field" maxlength="255" placeholder="Password"></div>
 			<p class="error"><?php
 			// Checks if inputted login/password matches to an entry in the db.
 			if (isset($_POST['log-in'])) {
