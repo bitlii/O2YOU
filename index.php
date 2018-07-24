@@ -45,6 +45,7 @@ if(isset($_POST["add-to-cart"])) {
 			);
 			// Adds the array to the start of the cart.
 			$_SESSION['cart'][0] = $itemarray;
+			echo '<script>alert("Item added to cart!")</script>';
 		}
 	}
 	// The user is not logged in. Warns the guest.
