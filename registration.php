@@ -30,12 +30,12 @@ if (isset($_POST['sign-up'])) {
 	<div class="form-container">
 		<form id="registration"	name="registration-form" method="post" action="" enctype="multipart/form-data">
 			<h1 class="form-title">Registration</h1>
-			<div class="form-element"><input name="first-name" type="text" required="required" class="text-field" maxlength="255" placeholder="First Name"></div>
-			<div class="form-element"><input name="last-name" type="text" required="required" class="text-field" maxlength="255" placeholder="Last Name"></div>
-			<div class="form-element"><input name="address" type="text" required="required" class="text-field" maxlength="255" placeholder="Address"></div>
-			<div class="form-element"><input name="email" type="email" required="required" class="text-field" maxlength="255" placeholder="Email"></div>
-			<div class="form-element"><input name="password" type="password" required="required" class="text-field" maxlength="255" placeholder="Password"></div>
-			<div class="form-element"><input name="confirm-password" type="password" required="required" class="text-field" maxlength="255" placeholder="Confirm Password"></div>
+			<div class="form-element"><input name="first-name" type="text" required="required" class="text-field" maxlength="128" placeholder="First Name"></div>
+			<div class="form-element"><input name="last-name" type="text" required="required" class="text-field" maxlength="128" placeholder="Last Name"></div>
+			<div class="form-element"><input name="address" type="text" required="required" class="text-field" maxlength="128" placeholder="Address"></div>
+			<div class="form-element"><input name="email" type="email" required="required" class="text-field" maxlength="128" placeholder="Email"></div>
+			<div class="form-element"><input name="password" type="password" required="required" class="text-field" maxlength="128" placeholder="Password"></div>
+			<div class="form-element"><input name="confirm-password" type="password" required="required" class="text-field" maxlength="128" placeholder="Confirm Password"></div>
 			<p class="error"><?php
 				// If the sign up button is pressed then insert all the info into the db on a new row when password and confirm password match.
 				if (isset($_POST['sign-up'])) {

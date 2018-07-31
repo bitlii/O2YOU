@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2018 at 10:55 PM
+-- Generation Time: Jul 31, 2018 at 11:59 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `products` (
-  `productID` smallint(255) NOT NULL,
-  `productname` varchar(255) NOT NULL,
-  `producttype` varchar(255) NOT NULL,
+  `productID` smallint(16) NOT NULL,
+  `productname` varchar(128) NOT NULL,
+  `producttype` varchar(128) NOT NULL,
   `productprice` float NOT NULL,
-  `productimage` varchar(255) NOT NULL
+  `productimage` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -61,12 +61,12 @@ INSERT INTO `products` (`productID`, `productname`, `producttype`, `productprice
 --
 
 CREATE TABLE `users` (
-  `userID` smallint(255) NOT NULL,
-  `firstname` varchar(255) NOT NULL,
-  `lastname` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `address` varchar(255) NOT NULL,
+  `userID` smallint(16) NOT NULL,
+  `firstname` varchar(128) NOT NULL,
+  `lastname` varchar(128) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  `address` varchar(128) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -179,7 +179,8 @@ INSERT INTO `users` (`userID`, `firstname`, `lastname`, `email`, `password`, `ad
 (408, 'Jay', 'Chen', 'chenjcaki@gmail.com', '1234567', '123 Realest Street', '2018-06-27 03:30:57'),
 (409, 'j', 'c', 'jc@jc.jc', '12', 'jc', '2018-07-02 22:03:21'),
 (410, 'Jackie', 'Chenn', '12@12', '12', '12', '2018-07-22 23:51:44'),
-(411, 'edge', 'lord', '11@1', '1', '123a', '2018-07-22 23:21:20');
+(411, 'edge', 'lord', '11@1', '1', '123a', '2018-07-22 23:21:20'),
+(412, 'Kylian', 'Mbappe', 'kbappe@gmail.com', '123', '123 PSGGGGG Place', '2018-07-24 22:18:32');
 
 --
 -- Indexes for dumped tables
@@ -205,13 +206,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `productID` smallint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `productID` smallint(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` smallint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=412;
+  MODIFY `userID` smallint(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=414;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
